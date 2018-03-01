@@ -11,6 +11,7 @@ import UIKit
 class TableViewCell: UITableViewCell {
 
     @IBOutlet var guessViews: [UIView]!
+    @IBOutlet var correctGuessesIndicators: [UIButton]!
     
 
     

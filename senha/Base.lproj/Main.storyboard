@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +30,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="68.5" height="87.5"/>
                                                 <color key="backgroundColor" red="0.37254901959999998" green="0.1529411765" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sjf-rP-pwP"/>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axY-vH-Emj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-bf-iT2">
@@ -82,51 +83,100 @@
                                     <constraint firstAttribute="trailing" secondItem="7g6-iF-uyl" secondAttribute="trailing" id="p8A-yh-P0m"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4p4-pM-4XM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4p4-pM-4XM">
                                 <rect key="frame" x="20" y="30" width="335" height="367"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PAf-eJ-CfE" customClass="TableViewCell" customModule="senha" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="PAf-eJ-CfE" customClass="TableViewCell" customModule="senha" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PAf-eJ-CfE" id="Fz0-Yt-hvN">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DKc-CY-xWr">
-                                                    <rect key="frame" x="10" y="0.0" width="315" height="43.5"/>
+                                                    <rect key="frame" x="10" y="10" width="235" height="39.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dK-o3-xPe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="67" height="43.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="39.5"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJW-Tc-lXE">
-                                                            <rect key="frame" x="83" y="0.0" width="66.5" height="43.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="63" y="0.0" width="46.5" height="39.5"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLi-Gs-4BW">
-                                                            <rect key="frame" x="165.5" y="0.0" width="67" height="43.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="125.5" y="0.0" width="47" height="39.5"/>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPe-f7-zBq">
-                                                            <rect key="frame" x="248.5" y="0.0" width="66.5" height="43.5"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="188.5" y="0.0" width="46.5" height="39.5"/>
                                                         </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-pQ-8ge">
+                                                    <rect key="frame" x="253" y="6" width="59" height="48"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpJ-lI-Wfb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="27" height="48"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v44-2e-M09">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="21.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSX-R0-VOO">
+                                                                    <rect key="frame" x="0.0" y="26.5" width="27" height="21.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gBU-eY-qG0">
+                                                            <rect key="frame" x="32" y="0.0" width="27" height="48"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqb-93-0vL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="21.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edE-0F-4iR">
+                                                                    <rect key="frame" x="0.0" y="26.5" width="27" height="21.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="DKc-CY-xWr" firstAttribute="top" secondItem="Fz0-Yt-hvN" secondAttribute="top" id="0Xf-wn-M3k"/>
-                                                <constraint firstItem="DKc-CY-xWr" firstAttribute="leading" secondItem="Fz0-Yt-hvN" secondAttribute="leading" constant="10" id="B4E-oh-hPW"/>
-                                                <constraint firstAttribute="bottom" secondItem="DKc-CY-xWr" secondAttribute="bottom" id="cG8-fV-Lur"/>
-                                                <constraint firstAttribute="trailing" secondItem="DKc-CY-xWr" secondAttribute="trailing" constant="10" id="j7o-la-Dlo"/>
+                                                <constraint firstItem="5fT-pQ-8ge" firstAttribute="leading" secondItem="DKc-CY-xWr" secondAttribute="trailing" constant="8" id="9sp-vw-Zof"/>
+                                                <constraint firstItem="5fT-pQ-8ge" firstAttribute="top" secondItem="Fz0-Yt-hvN" secondAttribute="topMargin" constant="-5" id="RPx-Ir-2XE"/>
+                                                <constraint firstItem="DKc-CY-xWr" firstAttribute="top" secondItem="Fz0-Yt-hvN" secondAttribute="top" constant="10" id="c4M-Xn-7EV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5fT-pQ-8ge" secondAttribute="bottom" constant="-5" id="grJ-cy-Z78"/>
+                                                <constraint firstItem="DKc-CY-xWr" firstAttribute="leading" secondItem="Fz0-Yt-hvN" secondAttribute="leading" constant="10" id="n4W-6Y-3qa"/>
+                                                <constraint firstAttribute="bottom" secondItem="DKc-CY-xWr" secondAttribute="bottom" constant="10" id="rGZ-Cs-jfR"/>
+                                                <constraint firstAttribute="trailing" secondItem="DKc-CY-xWr" secondAttribute="trailing" constant="90" id="w32-m2-aGG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5fT-pQ-8ge" secondAttribute="trailing" constant="8" id="ytJ-dl-2yS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="correctGuessesIndicators" destination="v44-2e-M09" id="axw-p6-0rL"/>
                                             <outletCollection property="guessViews" destination="7dK-o3-xPe" collectionClass="NSMutableArray" id="mdF-ou-2mf"/>
                                             <outletCollection property="guessViews" destination="BJW-Tc-lXE" collectionClass="NSMutableArray" id="fff-7P-VWy"/>
                                             <outletCollection property="guessViews" destination="XLi-Gs-4BW" collectionClass="NSMutableArray" id="4ER-bT-rEY"/>
                                             <outletCollection property="guessViews" destination="vPe-f7-zBq" collectionClass="NSMutableArray" id="Rgm-tz-hMu"/>
+                                            <outletCollection property="correctGuessesIndicators" destination="kqb-93-0vL" collectionClass="NSMutableArray" id="KGX-CN-JJL"/>
+                                            <outletCollection property="correctGuessesIndicators" destination="YSX-R0-VOO" collectionClass="NSMutableArray" id="xat-S8-qu8"/>
+                                            <outletCollection property="correctGuessesIndicators" destination="edE-0F-4iR" collectionClass="NSMutableArray" id="iBt-eY-XYQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
